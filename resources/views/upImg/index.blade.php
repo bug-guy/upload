@@ -31,11 +31,11 @@
         }
 
         #preview-images {
-          display: flex;
-          flex-wrap: wrap; /* Cho phép xuống hàng khi vượt quá kích thước */
-          justify-content: center; /* Căn giữa các ảnh */
-          gap: 20px; /* Khoảng cách giữa các ảnh */
-          margin-top: 20px;
+        display: flex;
+        flex-wrap: wrap; /* Cho phép xuống hàng khi vượt quá kích thước */
+        justify-content: center; /* Căn giữa các ảnh */
+        gap: 20px; /* Khoảng cách giữa các ảnh */
+        margin-top: 20px;
         }
 
         #preview-images img {
@@ -60,7 +60,7 @@
             </button>
             <div id="upload-dropdown" class="dropdown-menu full-width-dropdown">
                 <main style="height: 400px;" class="container mx-auto mt-10">
-                  <form action="{{route('file.upload')}}" method="POST" enctype="multipart/form-data">
+                <form action="{{route('file.upload')}}" method="POST" enctype="multipart/form-data">
                     @csrf  
                     @if(session('urls'))
                         <div class="text-center mt-10">
@@ -85,9 +85,9 @@
                                     <div class="row justify-content-center">
                                         <div class="col-8"> <!-- Điều chỉnh kích thước cột -->
                                             <textarea style="width = 550px;font-size: 15px;height: 150px;x;height: 250px;width: 550px;" id="embed-code" class="border p-2 rounded h-24 resize-none" readonly>
-                                              @foreach(session('urls') as $url)
-                                              {{ $url }}
-                                              @endforeach
+                                                @foreach(session('urls') as $url)
+                                                {{ $url }}
+                                                @endforeach
                                             </textarea>
                                         </div>
                                     </div>
@@ -119,7 +119,7 @@
                         <div id="preview-images" class="mt-4"></div>
                     </div>
                     <button class="bg-blue-500 text-white py-2 px-6 rounded" type="submit">Upload</button>
-                  </form>
+                    </form>
                 </main>
             </div>
         </div>
